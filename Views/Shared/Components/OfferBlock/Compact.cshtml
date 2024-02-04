@@ -1,0 +1,24 @@
+@using EPiServer.Web.Mvc.Html
+@model OptimizelyTask.Models.OfferBlock
+
+<div id="compact_@Html.PropertyFor(x => x.HtmlId)" class="d-block d-none mb-2"> 
+    <button id="cancel_@Html.PropertyFor(x => x.HtmlId)" data-id="@Html.PropertyFor(x => x.HtmlId)" class="btn btn-link ps-0 text-decoration-none" type="button" style="color: #e56465">Tilvalg</button>
+    <div class="border rounded-4 border-black border-2 p-3 d-flex justify-content-between">
+        <span>@Html.PropertyFor(x => x.Title)</span>
+        <span>@Html.PropertyFor(x => x.Price) kr./md.</span>
+    </div>
+</div>
+
+<script>
+    $('#cancel_@Html.PropertyFor(x => x.HtmlId)').on( "click", function() {
+        var id = $(this).attr('data-id');
+        $("#" + id).removeClass('selected-offer');
+        $("#compact_" + id).addClass('d-none');
+        
+        var currentPrice = parseInt($("#totalPerItem").text());
+        var blockPrice = parseInt(@Html.PropertyFor(x => x.Price));
+        $("#totalPerItem").text(currentPrice - blockPrice);
+        var rangeSelected = parseInt($("#rangeSelected").text());
+        $("#total" ).text(rangeSelected * (currentPrice - blockPrice));
+    })
+</script>

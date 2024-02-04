@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <language name="English" id="en">
+    <plusText>Dene bilvalg</plusText>
+    <employees> medarbejdere</employees>
+    <perEmployee>Pr. medarbejder</perEmployee>
+    <calculatePrice>Beregn din pris</calculatePrice>
+    <yourPrice>Din pris</yourPrice>
+    <openAccount>Opret gratis konto</openAccount>
+  </language>
+  <language name="Dansk" id="da">
+    <plusText>Dene bilvalg</plusText>
+    <employees> medarbejdere</employees>
+    <perEmployee>Pr. medarbejder</perEmployee>
+    <calculatePrice>Beregn din pris</calculatePrice>
+    <yourPrice>Din pris</yourPrice>
+    <openAccount>Opret gratis konto</openAccount>
+  </language>
+</languages>

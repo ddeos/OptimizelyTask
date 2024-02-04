@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "OptimizelyTask": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "hotReloadEnabled": true,
+      "applicationUrl": "https://localhost:5000/",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
